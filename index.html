@@ -33,6 +33,17 @@
         </div>
     </div>
 
+    <!-- Tambahkan audio element -->
+    <audio id="bgMusic" loop>
+        <source src="4.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Tambahkan tombol kontrol musik -->
+    <div class="music-control" onclick="toggleMusic()">
+        🎵
+    </div>
+
     <script>
         function openEnvelope() {
             const envelope = document.querySelector('.envelope');

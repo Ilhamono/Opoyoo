@@ -55,6 +55,24 @@
                 card.classList.add('show');
             }, 800);
         }
+
+        // Fungsi untuk mengontrol musik
+        function toggleMusic() {
+            const audio = document.getElementById('bgMusic');
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        // Menangani interaksi pengguna untuk memulai musik
+        document.addEventListener('click', function() {
+            const audio = document.getElementById('bgMusic');
+            audio.play().catch(function(error) {
+                console.log("Playback prevented");
+            });
+        }, { once: true });
     </script>
 </body>
 </html>
